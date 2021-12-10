@@ -5,8 +5,12 @@
 .Grid {
     margin: 0px;
     width: 100%;
+    height: 80%;
+    background-color: #55454a;
+    
 }
 .Icon {
-    color: #270712;
+    color: #ac657d;
+    border-radius: 50px;
 }
 

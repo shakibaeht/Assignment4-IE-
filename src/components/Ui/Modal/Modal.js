@@ -9,7 +9,7 @@ import './Modal.css';
 
 const modaldialog = (props) => {
 
-    const { open, text} = props;
+    const {open, text} = props;
 
     let icon;
     if(text.includes('Won'))
@@ -30,22 +30,18 @@ const modaldialog = (props) => {
             <DialogContent className="Dialog">
                 <Icon
                     className="Icon"
-                    style={{fontSize: 64}}>
+                    style={{fontSize: 65}}>
                     {icon}
                 </Icon>
                 <DialogContentText className="Content">
                     {text}
                 </DialogContentText>
-            </DialogContent>
-            
+            </DialogContent>  
         </Dialog>
     )
 };
-
 modaldialog.propTypes = {
   open: PropTypes.func,
-  onClose: PropTypes.func,
   text: PropTypes.string
 };
-
 export default withMobileDialog()(modaldialog);

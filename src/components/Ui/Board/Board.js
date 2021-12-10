@@ -7,7 +7,6 @@ import './Board.css';
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Icon from '@material-ui/core/Icon';
 
-
 class Board extends Component {
 
     state = {
@@ -115,7 +114,7 @@ class Board extends Component {
                     <ButtonBase>
                         <Paper
                             onClick={this.clickHandler}
-                            elevation={4}
+                            elevation={3}
                             data-coord={rowId + ':' + columnId}
                             className="Paper">
                             <Icon
@@ -143,10 +142,8 @@ class Board extends Component {
         )
     }
 }
-
 Board.propTypes = {
     won: PropTypes.func,
     size: PropTypes.number
 };
-
 export default Board;

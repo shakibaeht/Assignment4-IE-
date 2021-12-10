@@ -51,25 +51,23 @@ const scorecard = (props) => {
             <Divider className="Divider"/>
             <Grid container style={{marginTop:'5px'}}>
                 <Grid item xs={4}>
-                    <Typography variant="caption" className="Scores">
+                    <Typography variant="caption" color="inherit" className="Scores">
                         {wons===null?0:wons}
                     </Typography>
                 </Grid>
                 <Grid item xs={4}>
-                    <Typography variant="caption" className="Scores">
+                    <Typography variant="caption" color="inherit" className="Scores">
                         {equals===null?0:equals}
                     </Typography>
                 </Grid>
                 <Grid item xs={4}>
-                    <Typography variant="caption" className="Scores">
+                    <Typography variant="caption" color="inherit" className="Scores">
                         {loss===null?0:loss}
                     </Typography>
                 </Grid>
             </Grid>
-
         </Aux>
     );
-
     return (
         <Snackbar
             anchorOrigin={{
@@ -89,8 +87,5 @@ const scorecard = (props) => {
 scorecard.propTypes = {
     open: PropTypes.func,
     onClose: PropTypes.func,
-    clearScore: PropTypes.func
 };
-
-
 export default scorecard;

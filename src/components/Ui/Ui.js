@@ -35,7 +35,6 @@ class Ui extends Component {
     };
     handleClose = () => {
         this.setState({open: false});
-        this.resetGame();
     };
 
     closeScore = () => {
@@ -52,16 +51,15 @@ class Ui extends Component {
                         <Button
                             onClick={this.showScore}
                             variant="raised"
-                            color="default">
-                            <List style={{color:'red'}}/>
-                            Score
+                            color="black">
+                            <List style={{color:'darkviolet'}}/>
+                            Scores
                         </Button>
                     </Grid>
                 </Grid>
                 <Modal
                     text={this.state.text}
-                    open={this.state.open}
-                    onClose={this.handleClose}/>
+                    open={this.state.open}/>
                 <Score
                     open={this.state.score}
                     onClose={this.closeScore}
@@ -74,5 +72,4 @@ class Ui extends Component {
 Ui.propTypes = {
   size: PropTypes.number
 };
-
 export default Ui;
