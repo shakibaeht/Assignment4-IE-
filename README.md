@@ -5,6 +5,9 @@ Created by Shakiba Ehteshami
 
 studentId : 970122680101
 
+###download and install
+please download nodejs on [link](https://nodejs.org/en/download/) and install it!
+
 ### To run in Local
 Clone or download and issue the below commands in project root directory and open [http://localhost:3000](http://localhost:3000) in browser
 ```javascript
