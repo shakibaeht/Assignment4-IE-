@@ -1,6 +1,8 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import withMobileDialog from '@material-ui/core/withMobileDialog';
@@ -9,7 +11,7 @@ import './Modal.css';
 
 const modaldialog = (props) => {
 
-    const {open, text} = props;
+    const {open, text, onClose} = props;
 
     let icon;
     if(text.includes('Won'))
@@ -36,12 +38,21 @@ const modaldialog = (props) => {
                 <DialogContentText className="Content">
                     {text}
                 </DialogContentText>
-            </DialogContent>  
+            </DialogContent> 
+            <DialogActions>
+                <Button
+                    onClick={onClose}
+                    color="secondary"
+                    autoFocus>
+                        Again
+                    </Button>
+            </DialogActions> 
         </Dialog>
     )
 };
 modaldialog.propTypes = {
   open: PropTypes.func,
+  onClose: PropTypes.func,
   text: PropTypes.string
 };
 export default withMobileDialog()(modaldialog);

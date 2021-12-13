@@ -24,7 +24,16 @@ class Ui extends Component {
             text: text
         })
     };
-
+    handleClose = () => {
+        this.setState({open: false});
+        this.resetGame();
+    };
+    resetGame = () => {
+        const value = Math.random().toString(36).substring(7);
+        this.setState({
+            board: <Board size={this.props.size} won={this.winner} key={value}/>
+        })
+    };
     render() {
         return (
             <Aux>
@@ -34,8 +43,8 @@ class Ui extends Component {
                 </Grid>
                 <Modal
                     text={this.state.text}
-                    open={this.state.open}/>
-                
+                    open={this.state.open}
+                    onClose={this.handleClose}/>
             </Aux>
         )
     }
